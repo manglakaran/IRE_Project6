@@ -1,0 +1,41 @@
+<html>
+<head>
+ <title>Demo</title>
+</head>
+<header>
+    <ul id="welcome" class="dropdown-content">
+    </ul>
+    <nav>
+    <div class="nav-wrapper">
+    </div>
+    </nav>
+    </header>
+<link rel="stylesheet" href="./static/css/lib/m.css"/>
+<div class=row>
+<table class="centered striped">
+<tbody>
+<tr>
+  <th>Image</th>
+  <th>Name</th>
+  <th>Price</th>
+  <th>Rating</th>
+
+  </tr>
+   {% for pipe in pipes %}
+  <tr>
+  <td><img src={{ pipe.img_link }}></td>
+  <td> <a href="map/{{ pipe.Name.replace('/','ZZZZZ') }}">{{ pipe.Name }}</a></td>
+<td> {{pipe.Price}}</td>  
+	<td> {{pipe.Ratings}}</td>
+  
+
+
+  </tr>
+  
+{% endfor %}
+</tbody>
+</table>
+</div>
+</body>
+
+</html> 

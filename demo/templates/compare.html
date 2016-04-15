@@ -1,0 +1,89 @@
+<html>
+<title>
+</title>
+<script src="../../static/js/lib/b.js"></script>
+<script src="../../static/js/lib/jquery.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../../static/css/lib/m.css"/>
+<script src="../../static/js/lib/m.js" type="text/javascript"></script>
+
+<body>
+<header>
+    <ul id="welcome" class="dropdown-content">
+    </ul>
+    <nav>
+    <div class="nav-wrapper">
+    </div>
+    </nav>
+    </header>
+</br><h5 align="middle"> {{p}} Sellers are available</h5>
+<table class= "centered striped">
+<tr>
+     <td> Name</td>
+      <td>Price</td>
+      <td>Ratings</td>
+      <td>Condition</td>
+      <td>Updated On</td>
+
+</tr>
+{% for row in vens %}
+    <tr>
+      <td>{{row.Name }}</td>
+      <td>{{row.Price}}</td>
+      <td>{{row.Ratings}}</td>
+      <td>{{row.Condition}}</td>
+      <td>{{row.Date}}</td>
+      {% endfor %}
+    </tr>
+</table>
+<h5 align="middle"> Best Sellers(Based on Price)</h5>
+
+
+<p></p>
+<p>
+<table class="centered striped">
+<tr>
+     <td> Name</td>
+      <td>Price</td>
+      <td>Ratings</td>
+      <td>Condition</td>
+      <td>Updated On</td>
+
+</tr>
+{% for row in n %}
+    <tr>
+      <td>{{row.Name }}</td>
+      <td>{{row.Price}}</td>
+      <td>{{row.Ratings}}</td>
+      <td>{{row.Condition}}</td>
+      <td>{{row.Date}}</td>
+      {% endfor %}
+    </tr>
+
+</table></p>
+
+<h5 align="middle">Best Sellers(Based on Rating) </h5>
+<table class="centered striped">
+<tr>
+     <td> Name</td>
+      <td>Price</td>
+      <td>Ratings</td>
+      <td>Condition</td>
+      <td>Updated On</td>
+
+</tr>
+
+{% for row in t1 %}
+    <tr>
+      <td>{{row.Name }}</td>
+      <td>{{row.Price}}</td>
+      <td>{{row.Ratings}}</td>
+      <td>{{row.Condition}}</td>
+      <td>{{row.Date}}</td>
+      {% endfor %}
+    </tr>
+
+</table>
+
+
+</body>
+</html>
